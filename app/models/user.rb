@@ -11,5 +11,7 @@ class User < ActiveRecord::Base
     validates :profile, length: { minimum: 2, maximun: 100 }, :allow_blank => true
     # 地域は2文字以上, 50文字以下, 未入力_OK
     validates :area, length: { minimum: 2, maximun: 50 }, :allow_blank => true
+    
+    has_many :microposts
 
 end
