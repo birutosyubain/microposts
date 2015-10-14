@@ -1,0 +1,19 @@
+<h1>フォローの一覧</h1>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge"><%= @followings.count %></span>
+                フォローしている数
+            </li>
+        </ul>
+        <% @followings.each do |f| %>
+          <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title"><%= f.name %></h3>
+              </div>
+              <div class="panel-body"><%= f.email %></div>
+          </div>
+        <% end %>
+    </div>
+</div>
