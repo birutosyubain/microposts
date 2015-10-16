@@ -6,6 +6,9 @@
                 <span class="badge"><%= @followers.count %></span>
                 フォローされてる数
             </li>
+            <li class="list-group-item">
+                <%= page_entries_info @followers %>
+            </li>
         </ul>
         <% @followers.each do |f| %>
           <div class="panel panel-info">
@@ -15,5 +18,6 @@
               <div class="panel-body"><%= f.email %></div>
           </div>
         <% end %>
+        <%= paginate @followers %>
     </div>
 </div>

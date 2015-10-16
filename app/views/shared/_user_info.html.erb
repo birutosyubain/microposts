@@ -3,6 +3,6 @@
 <span><%= link_to "view my profile", current_user %></span>
 <span><%= pluralize(current_user.microposts.count, "micropost") %></span>
 <span>
-    <%= link_to "フォロー 一覧", followings_user_path(current_user), class: "btn btn-primary" %>
+    <%= link_to "フォロー 一覧", followings_user_path(current_user), class: "btn btn-info" %>
     <%= link_to "フォロワー 一覧", followers_user_path(current_user), class: "btn btn-success" %>
 </span>
