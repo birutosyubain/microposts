@@ -5,9 +5,7 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgrelsql
-  encoding: unicode
-  pool: 5
+  database: db/development.sqlite3
 
 test:
   <<: *default
@@ -15,4 +13,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
